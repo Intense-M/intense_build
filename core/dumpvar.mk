@@ -94,6 +94,40 @@ $(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION_ARM))
 else
 $(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION))
 endif
+$(info ========================================================)
+$(info =====================OPTIMIZATIONS======================)
+$(info ========================================================)
+ifdef    USE_O3_OPTIMIZATIONS
+$(info   USE_O3_OPTIMIZATIONS=$(USE_O3_OPTIMIZATIONS))
+else
+$(info   USE_O3_OPTIMIZATIONS=false)
+endif
+ifdef    FLOOP_NEST_OPTIMIZE
+$(info   FLOOP_NEST_OPTIMIZE=$(FLOOP_NEST_OPTIMIZE))
+else
+$(info   FLOOP_NEST_OPTIMIZE=false)
+endif
+ifdef    FFAST_MATH
+$(info   FFAST_MATH=$(FFAST_MATH))
+else
+$(info   FFAST_MATH=false)
+endif
+ifdef    STRICT_ALIASING
+$(info   STRICT_ALIASING=$(STRICT_ALIASING))
+else
+$(info   STRICT_ALIASING=false)
+endif
+ifdef    ENABLE_GCCONLY
+$(info   ENABLE_GCCONLY=$(ENABLE_GCCONLY))
+else
+$(info   ENABLE_GCCONLY=false)
+endif
+ifdef    GRAPHITE_OPTS
+$(info   GRAPHITE_OPTS=$(GRAPHITE_OPTS))
+else
+$(info   GRAPHITE_OPTS=false)
+endif
+$(info ========================================================)
 $(info   HOST_ARCH=$(HOST_ARCH))
 $(info   HOST_OS=$(HOST_OS))
 $(info   HOST_OS_EXTRA=$(HOST_OS_EXTRA))
