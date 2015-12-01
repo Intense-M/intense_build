@@ -97,20 +97,10 @@ endif
 $(info ========================================================)
 $(info =====================OPTIMIZATIONS======================)
 $(info ========================================================)
-ifdef    USE_O3_OPTIMIZATIONS
-$(info   USE_O3_OPTIMIZATIONS=$(USE_O3_OPTIMIZATIONS))
+ifdef    CLANG_O3
+$(info   CLANG_O3=$(CLANG_O3))
 else
-$(info   USE_O3_OPTIMIZATIONS=false)
-endif
-ifdef    FLOOP_NEST_OPTIMIZE
-$(info   FLOOP_NEST_OPTIMIZE=$(FLOOP_NEST_OPTIMIZE))
-else
-$(info   FLOOP_NEST_OPTIMIZE=false)
-endif
-ifdef    FFAST_MATH
-$(info   FFAST_MATH=$(FFAST_MATH))
-else
-$(info   FFAST_MATH=false)
+$(info   CLANG_O3=false)
 endif
 ifdef    STRICT_ALIASING
 $(info   STRICT_ALIASING=$(STRICT_ALIASING))
