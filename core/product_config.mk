@@ -181,7 +181,7 @@ include $(BUILD_SYSTEM)/device.mk
 
 # A INTENSE build needs only the INTENSE product makefiles.
 ifneq ($(INTENSE_BUILD),)
-  all_product_configs := $(shell find device -path "*/$(AOSPB_BUILD)/aospb.mk")
+  all_product_configs := $(shell find device -path "*/$(INTENSE_BUILD)/intense.mk")
 else
   ifneq ($(strip $(TARGET_BUILD_APPS)),)
   # An unbundled app build needs only the core product makefiles.
