@@ -179,8 +179,8 @@ include $(BUILD_SYSTEM)/node_fns.mk
 include $(BUILD_SYSTEM)/product.mk
 include $(BUILD_SYSTEM)/device.mk
 
-# A AOSPB build needs only the AOSPB product makefiles.
-ifneq ($(AOSPB_BUILD),)
+# A INTENSE build needs only the INTENSE product makefiles.
+ifneq ($(INTENSE_BUILD),)
   all_product_configs := $(shell find device -path "*/$(AOSPB_BUILD)/aospb.mk")
 else
   ifneq ($(strip $(TARGET_BUILD_APPS)),)
@@ -192,9 +192,9 @@ else
     # files in the tree.
     all_product_configs := $(get-all-product-makefiles)
   endif # TARGET_BUILD_APPS
-endif # AOSPB_BUILD
+endif # INTENSE_BUILD
 
-ifeq ($(AOSPB_BUILD),)
+ifeq ($(INTENSE_BUILD),)
 # Find the product config makefile for the current product.
 # all_product_configs consists items like:
 # <product_name>:<path_to_the_product_makefile>
