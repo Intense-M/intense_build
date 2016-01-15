@@ -652,7 +652,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.AppendExtra("endif;")
   
   builddate = GetBuildProp("ro.build.date", OPTIONS.info_dict);
-  releasetype = GetBuildProp("ro.intense.releasetype", OPTIONS.info_dict);
+  buildtype = GetBuildProp("ro.intense.buildtype", OPTIONS.info_dict);
   
   device = GetBuildProp("ro.intense.device", OPTIONS.info_dict);
   if not OPTIONS.override_prop:
@@ -660,7 +660,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   else:
     product = "%s (unified)"%(device);
     
-  script.Print("* Release: %s"%(releasetype));
+  script.Print("* Release: %s"%(buildtype));
   script.Print("* Build date: %s"%(builddate));
   script.Print("* Device: %s"%(product));
 
