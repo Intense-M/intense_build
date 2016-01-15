@@ -1881,9 +1881,28 @@ INTENSE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(INTENSE_MOD_VERSION).zip
 .PHONY: otapackage intense bootzip
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 intense: otapackage
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTENSE_TARGET_PACKAGE)
+$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(INTENSE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(INTENSE_TARGET_PACKAGE) > $(INTENSE_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_CYN}"Package Complete: $(INTENSE_TARGET_PACKAGE)"${CL_RST}
+	@echo -e ${CL_GRN}""${CL_GRN}
+	@echo -e ""${CL_GRN}
+	@echo -e ${CL_GRN}"  ██▓ ███▄    █ ▄▄▄█████▓▓█████  ███▄    █   ██████ ▓█████      ▒█████    ██████  "${CL_GRN}
+	@echo -e ${CL_GRN}" ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓█   ▀  ██ ▀█   █ ▒██    ▒ ▓█   ▀     ▒██▒  ██▒▒██    ▒  "${CL_GRN}
+	@echo -e ${CL_GRN}" ▒██▒▓██  ▀█ ██▒▒ ▓██░ ▒░▒███   ▓██  ▀█ ██▒░ ▓██▄   ▒███       ▒██░  ██▒░ ▓██▄    "${CL_GRN}
+	@echo -e ${CL_GRN}" ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒▒▓█  ▄     ▒██   ██░  ▒   ██▒ "${CL_GRN}
+	@echo -e ${CL_GRN}" ░██░▒██░   ▓██░  ▒██▒ ░ ░▒████▒▒██░   ▓██░▒██████▒▒░▒████▒    ░ ████▓▒░▒██████▒▒ "${CL_GRN}
+	@echo -e ${CL_GRN}" ░▓  ░ ▒░   ▒ ▒   ▒ ░░   ░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░    ░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░ "${CL_GRN}
+	@echo -e ${CL_GRN}"  ▒ ░░ ░░   ░ ▒░    ░     ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░ ░ ░  ░      ░ ▒ ▒░ ░ ░▒  ░ ░ "${CL_GRN}
+	@echo -e ${CL_GRN}"  ▒ ░   ░   ░ ░   ░         ░      ░   ░ ░ ░  ░  ░     ░       ░ ░ ░ ▒  ░  ░  ░   "${CL_GRN}
+	@echo -e ${CL_GRN}"  ░           ░             ░  ░         ░       ░     ░  ░        ░ ░        ░   "${CL_GRN}
+	@echo -e ${CL_GRN}""${CL_GRN}
+	@echo -e ${CL_GRN}"                 Build completed!! Flash that ROM and ENJOY!!                    "${CL_GRN}
+	@echo -e ${CL_GRN}""${CL_GRN}
+	@echo -e ${CL_YLW}"****************"${CL_YLW}
+	@echo -e ${CL_YLW}"ROM Size : `ls -lh $(INTENSE_TARGET_PACKAGE) | cut -d ' ' -f 5`"
+	@echo -e ${CL_YLW}"****************"${CL_YLW}
+	@echo -e ${CL_GRN}""${CL_GRN}
+	@echo -e ${CL_GRN}"Package Complete: $(INTENSE_TARGET_PACKAGE)"${CL_GRN}
+	@echo -e ${CL_GRN}""${CL_GRN}
 
 bootzip: bootimage
 	$(BOOT_ZIP_FROM_IMAGE_SCRIPT) \
