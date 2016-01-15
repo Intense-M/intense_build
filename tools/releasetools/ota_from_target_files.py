@@ -635,7 +635,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("*                                                    *")
   script.Print("*                   by vibhu0009                     *")
   script.Print("*                                                    *")
-  script.Print("*                 Android - 6.0.1                    *")
+  script.Print("*              ||  Android - 6.0.1  ||               *")
   script.Print("******************************************************")
 
   if OPTIONS.wipe_user_data:
