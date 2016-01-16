@@ -73,7 +73,7 @@ $(info ██║██║ ╚████║   ██║   ███████
 $(info ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝)
 $(info ========================================================)
 $(info   INTENSE_VERSION=$(INTENSE_VERSION))
-$(info   INTENSE_BUILDTYPE=$(INTENSE_BUILDTYPE))
+$(info   INTENSE_BUILD_TYPE=$(INTENSE_BUILDTYPE))
 $(info ========================================================)
 $(info   BUILD_ID=$(BUILD_ID))
 $(info   PLATFORM_VERSION_CODENAME=$(PLATFORM_VERSION_CODENAME))
