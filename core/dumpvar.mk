@@ -64,6 +64,7 @@ endif # CALLED_FROM_SETUP
 
 ifneq ($(PRINT_BUILD_CONFIG),)
 HOST_OS_EXTRA:=$(shell python -c "import platform; print(platform.platform())")
+$(info ========================================================)
 $(info ██╗███╗   ██╗████████╗███████╗███╗   ██╗███████╗███████╗)
 $(info ██║████╗  ██║╚══██╔══╝██╔════╝████╗  ██║██╔════╝██╔════╝)
 $(info ██║██╔██╗ ██║   ██║   █████╗  ██╔██╗ ██║███████╗█████╗  )
@@ -72,7 +73,7 @@ $(info ██║██║ ╚████║   ██║   ███████
 $(info ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝)
 $(info ========================================================)
 $(info   INTENSE_VERSION=$(INTENSE_VERSION))
-$(info   INTENSE_BUILDTYPE=$(INTENSE_BUILDTYPE))
+$(info   INTENSE_BUILD_TYPE=$(INTENSE_BUILDTYPE))
 $(info ========================================================)
 $(info   BUILD_ID=$(BUILD_ID))
 $(info   PLATFORM_VERSION_CODENAME=$(PLATFORM_VERSION_CODENAME))

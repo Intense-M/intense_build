@@ -45,8 +45,8 @@ default_manifest = ".repo/manifest.xml"
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
 custom_default_revision = "mm-6.0"
 custom_dependencies = "intense.dependencies"
-org_manifest = "Intense-M"  # leave empty if org is provided in manifest
-org_display = "Intense-M"  # needed for displaying
+org_manifest = "IntenseOS-Devices"  # leave empty if org is provided in manifest
+org_display = "IntenseOS-Devices"  # needed for displaying
 
 github_auth = None
 
