@@ -74,6 +74,7 @@ $(info ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════�
 $(info ========================================================)
 $(info   INTENSE_VERSION=$(INTENSE_VERSION))
 $(info   INTENSE_BUILD_TYPE=$(INTENSE_BUILD_TYPE))
+$(info   PLATFORM_SECURITY_PATCH=$(PLATFORM_SECURITY_PATCH))
 $(info ========================================================)
 $(info   BUILD_ID=$(BUILD_ID))
 $(info   PLATFORM_VERSION=$(PLATFORM_VERSION))
