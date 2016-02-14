@@ -21,7 +21,7 @@ BASE=$(pwd)
 
 if [ -e "$1" ];then
     NAME=$(basename $1)
-    echo -e $CL_YLW"Optimize:"$CL_RST" $NAME.."
+    echo -e $CL_YLW"Crushing:"$CL_RST" $NAME.."
 
     APKINFO=$(grep "name=\"$NAME\"" $APKCERTS)
     [ $QUIET ] || echo "APKINFO: $APKINFO"

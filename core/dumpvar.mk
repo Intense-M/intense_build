@@ -74,6 +74,7 @@ $(info ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════�
 $(info ========================================================)
 $(info   INTENSE_VERSION=$(INTENSE_VERSION))
 $(info   INTENSE_BUILD_TYPE=$(INTENSE_BUILD_TYPE))
+$(info   PLATFORM_SECURITY_PATCH=$(PLATFORM_SECURITY_PATCH))
 $(info ========================================================)
 $(info   BUILD_ID=$(BUILD_ID))
 $(info   PLATFORM_VERSION=$(PLATFORM_VERSION))
@@ -87,6 +88,12 @@ $(info   TARGET_CPU_VARIANT=$(TARGET_CPU_VARIANT))
 $(info   TARGET_2ND_ARCH=$(TARGET_2ND_ARCH))
 $(info   TARGET_2ND_ARCH_VARIANT=$(TARGET_2ND_ARCH_VARIANT))
 $(info   TARGET_2ND_CPU_VARIANT=$(TARGET_2ND_CPU_VARIANT))
+$(info   ROM_TOOLCHAIN_USED=$(TARGET_GCC_VERSION_EXP))
+ifdef TARGET_GCC_VERSION_ARM
+$(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION_ARM))
+else
+$(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION))
+endif
 $(info   HOST_ARCH=$(HOST_ARCH))
 $(info   HOST_OS=$(HOST_OS))
 $(info   HOST_OS_EXTRA=$(HOST_OS_EXTRA))
