@@ -94,9 +94,7 @@ $(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION_ARM))
 else
 $(info KERNEL_TOOLCHAIN_USED=$(TARGET_GCC_VERSION))
 endif
-$(info ========================================================)
 $(info =====================OPTIMIZATIONS======================)
-$(info ========================================================)
 ifdef    CLANG_O3
 $(info   CLANG_O3=$(CLANG_O3))
 else
